@@ -51,7 +51,11 @@ subprojects {
     repositories {
         mavenCentral()
         maven {
-            url "https://nexus.k8s.an.digikfplc.com/repository/maven-public/"
+            credentials {
+                username "$System.env.PAYPAL_MIRAKL_SDK_USER"
+                password "$System.env.PAYPAL_MIRAKL_SDK_PASSWORD"
+            }
+            url "https://artifactory.mirakl.net/artifactory/mirakl-ext-repo/"
         }
     }
 
@@ -90,7 +94,7 @@ subprojects {
         environment =
             environment = ["BP_JVM_VERSION"              : "16",
                            "BPE_DELIM_JAVA_TOOL_OPTIONS" : " ",
-                           "BPE_APPEND_JAVA_TOOL_OPTIONS": "-Xms256m -Xmx256m"
+                           "BPE_APPEND_JAVA_TOOL_OPTIONS": "-Xms256m -Xmx1g"
             ]
     }
 

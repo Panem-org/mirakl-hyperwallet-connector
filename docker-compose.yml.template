@@ -37,7 +37,6 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=${PAYPAL_RABBITMQ_USERNAME}
       - RABBITMQ_DEFAULT_PASS=${PAYPAL_RABBITMQ_PASSWORD}
-      - RABBITMQ_ERLANG_COOKIE=${PAYPAL_RABBITMQ_ERLANG_COOKIE}
     env_file:
       - ".env"
   smtp:

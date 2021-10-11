@@ -5,6 +5,10 @@ services:
       - ".env"
     image: @DOCKER_REPOSITORY_NAME@:@DOCKER_TAG@
     restart: always
+    deploy:
+      resources:
+        limits:
+          memory: 2G
     ports:
       - "8080:8080"
     depends_on:

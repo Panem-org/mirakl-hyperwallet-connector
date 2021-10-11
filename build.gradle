@@ -51,11 +51,7 @@ subprojects {
     repositories {
         mavenCentral()
         maven {
-            credentials {
-                username "$System.env.PAYPAL_MIRAKL_SDK_USER"
-                password "$System.env.PAYPAL_MIRAKL_SDK_PASSWORD"
-            }
-            url "https://artifactory.mirakl.net/artifactory/mirakl-ext-repo/"
+            url "https://nexus.k8s.an.digikfplc.com/repository/maven-public/"
         }
     }
 
